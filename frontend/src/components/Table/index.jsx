@@ -1,7 +1,14 @@
+import { useState } from 'react';
+import { EachItem } from '../EachItem';
+
 export const Table = ({ setLoggedIn }) => {
   const handleLogoutClick = () => {
-    setLoggedIn(false);
+    setTimeout(() => setLoggedIn(false), 1000);
   };
+
+  const [listOfLinks, setListOfLinks] = useState({});
+
+  const handleAddClick = () => {};
 
   return (
     <>
@@ -10,7 +17,14 @@ export const Table = ({ setLoggedIn }) => {
       </div>
 
       <div className='box table'>
-        <div>Oioioi</div>
+        <div className='title'>
+          <h2>List of Links</h2>
+          <button className='btn-crud add' onClick={handleAddClick}>
+            ADD
+          </button>
+        </div>
+
+        <EachItem />
       </div>
     </>
   );

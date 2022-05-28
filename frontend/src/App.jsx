@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Background } from './Background';
+import { Background } from './components/Background';
 import { Login } from './components/Login';
 import { Table } from './components/Table';
 

@@ -1,6 +1,6 @@
 export const Login = ({ setLoggedIn }) => {
   const handleLoginClick = () => {
-    setLoggedIn(true);
+    setTimeout(() => setLoggedIn(true), 1000);
   };
 
   return (
