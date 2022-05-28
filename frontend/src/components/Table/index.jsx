@@ -3,7 +3,7 @@ import { EachItem } from '../EachItem';
 
 export const Table = ({ setLoggedIn }) => {
   const handleLogoutClick = () => {
-    setTimeout(() => setLoggedIn(false), 1000);
+    setLoggedIn(false);
   };
 
   const [listOfLinks, setListOfLinks] = useState({});
