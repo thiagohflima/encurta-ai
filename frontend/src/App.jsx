@@ -9,8 +9,17 @@ export default function App() {
   return (
     <>
       <Background />
+
+      <div className='header'>
+        Encurt<span>Aí</span>
+      </div>
+
       {!loggedIn && <Login setLoggedIn={setLoggedIn} />}
       {loggedIn && <Table setLoggedIn={setLoggedIn} />}
+
+      <div className='footer'>
+        <span>Developed by:</span> Thiago H F Lima
+      </div>
     </>
   );
 }
