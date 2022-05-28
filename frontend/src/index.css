@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 * {
   margin: 0;
@@ -7,5 +7,292 @@
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
+  height: 100vh;
+  background-color: #f4f4f4;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes move {
+  100% {
+    transform: translate3d(0, 0, 1px) rotate(360deg);
+  }
+}
+
+.background {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: #581d22;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.background span {
+  width: 20vmin;
+  height: 20vmin;
+  border-radius: 20vmin;
+  backface-visibility: hidden;
+  position: absolute;
+  animation: move;
+  animation-duration: 20;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.background span:nth-child(0) {
+  color: #b25738;
+  top: 14%;
+  left: 27%;
+  animation-duration: 41s;
+  animation-delay: -219s;
+  transform-origin: 14vw 3vh;
+  box-shadow: 40vmin 0 5.747717137134174vmin currentColor;
+}
+.background span:nth-child(1) {
+  color: #b25738;
+  top: 25%;
+  left: 34%;
+  animation-duration: 296s;
+  animation-delay: -108s;
+  transform-origin: 7vw 7vh;
+  box-shadow: -40vmin 0 5.603460264987739vmin currentColor;
+}
+.background span:nth-child(2) {
+  color: #b25738;
+  top: 70%;
+  left: 5%;
+  animation-duration: 279s;
+  animation-delay: -80s;
+  transform-origin: -16vw 6vh;
+  box-shadow: -40vmin 0 5.8908032558499075vmin currentColor;
+}
+.background span:nth-child(3) {
+  color: #b25738;
+  top: 83%;
+  left: 95%;
+  animation-duration: 207s;
+  animation-delay: -65s;
+  transform-origin: -6vw 18vh;
+  box-shadow: -40vmin 0 5.3312383672618875vmin currentColor;
+}
+.background span:nth-child(4) {
+  color: #ffacac;
+  top: 58%;
+  left: 64%;
+  animation-duration: 265s;
+  animation-delay: -186s;
+  transform-origin: -8vw -5vh;
+  box-shadow: 40vmin 0 5.065943735678063vmin currentColor;
+}
+.background span:nth-child(5) {
+  color: #ffacac;
+  top: 6%;
+  left: 35%;
+  animation-duration: 304s;
+  animation-delay: -29s;
+  transform-origin: -4vw 16vh;
+  box-shadow: 40vmin 0 5.167165821684182vmin currentColor;
+}
+.background span:nth-child(6) {
+  color: #e45a84;
+  top: 22%;
+  left: 40%;
+  animation-duration: 198s;
+  animation-delay: -162s;
+  transform-origin: 21vw 1vh;
+  box-shadow: -40vmin 0 5.768132170715783vmin currentColor;
+}
+.background span:nth-child(7) {
+  color: #b25738;
+  top: 84%;
+  left: 91%;
+  animation-duration: 100s;
+  animation-delay: -107s;
+  transform-origin: 25vw -7vh;
+  box-shadow: -40vmin 0 5.641847133798436vmin currentColor;
+}
+.background span:nth-child(8) {
+  color: #e45a84;
+  top: 70%;
+  left: 40%;
+  animation-duration: 155s;
+  animation-delay: -125s;
+  transform-origin: 17vw 14vh;
+  box-shadow: 40vmin 0 5.384336049391195vmin currentColor;
+}
+.background span:nth-child(9) {
+  color: #e45a84;
+  top: 40%;
+  left: 70%;
+  animation-duration: 173s;
+  animation-delay: -160s;
+  transform-origin: 14vw 24vh;
+  box-shadow: -40vmin 0 5.869485723359666vmin currentColor;
+}
+.background span:nth-child(10) {
+  color: #e45a84;
+  top: 30%;
+  left: 62%;
+  animation-duration: 101s;
+  animation-delay: -69s;
+  transform-origin: -23vw -16vh;
+  box-shadow: -40vmin 0 5.81495153389927vmin currentColor;
+}
+.background span:nth-child(11) {
+  color: #b25738;
+  top: 51%;
+  left: 28%;
+  animation-duration: 196s;
+  animation-delay: -69s;
+  transform-origin: 10vw -21vh;
+  box-shadow: -40vmin 0 5.078485807291229vmin currentColor;
+}
+.background span:nth-child(12) {
+  color: #e45a84;
+  top: 28%;
+  left: 11%;
+  animation-duration: 153s;
+  animation-delay: -45s;
+  transform-origin: 9vw 3vh;
+  box-shadow: -40vmin 0 5.662895505669122vmin currentColor;
+}
+.background span:nth-child(13) {
+  color: #ffacac;
+  top: 59%;
+  left: 95%;
+  animation-duration: 252s;
+  animation-delay: -277s;
+  transform-origin: -15vw 8vh;
+  box-shadow: -40vmin 0 5.516835339994958vmin currentColor;
+}
+.background span:nth-child(14) {
+  color: #b25738;
+  top: 80%;
+  left: 8%;
+  animation-duration: 192s;
+  animation-delay: -131s;
+  transform-origin: -22vw -12vh;
+  box-shadow: 40vmin 0 5.0746286352043946vmin currentColor;
+}
+.background span:nth-child(15) {
+  color: #ffacac;
+  top: 9%;
+  left: 56%;
+  animation-duration: 81s;
+  animation-delay: -233s;
+  transform-origin: -3vw 2vh;
+  box-shadow: 40vmin 0 5.91643834250436vmin currentColor;
+}
+.background span:nth-child(16) {
+  color: #ffacac;
+  top: 33%;
+  left: 11%;
+  animation-duration: 288s;
+  animation-delay: -206s;
+  transform-origin: 22vw 2vh;
+  box-shadow: 40vmin 0 5.170945555569894vmin currentColor;
+}
+.background span:nth-child(17) {
+  color: #e45a84;
+  top: 40%;
+  left: 32%;
+  animation-duration: 137s;
+  animation-delay: -27s;
+  transform-origin: -20vw -6vh;
+  box-shadow: 40vmin 0 5.0971103150066845vmin currentColor;
+}
+.background span:nth-child(18) {
+  color: #e45a84;
+  top: 13%;
+  left: 49%;
+  animation-duration: 269s;
+  animation-delay: -278s;
+  transform-origin: 0vw 6vh;
+  box-shadow: 40vmin 0 5.244604690327424vmin currentColor;
+}
+.background span:nth-child(19) {
+  color: #b25738;
+  top: 43%;
+  left: 72%;
+  animation-duration: 270s;
+  animation-delay: -51s;
+  transform-origin: 4vw 10vh;
+  box-shadow: -40vmin 0 5.7216385030914925vmin currentColor;
+}
+
+.box {
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 1.5rem;
+}
+
+.login {
+  flex-direction: column;
+}
+
+.login div {
+  width: 10rem;
+}
+
+.login .input-container {
+  margin-bottom: 0.5rem;
+}
+
+.login .button-container {
+  margin-top: 0.5rem;
+}
+
+.logout input,
+.login input {
+  height: 2rem;
+  border-radius: 5px;
+  border: none;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+.logout input,
+.login .button-container input {
+  color: #f4f4f4;
+  background-color: #300410;
+  font-weight: bold;
+}
+
+.logout input:hover,
+.login .button-container input:hover {
+  background-color: #160408;
+  font-weight: bold;
+
+  -webkit-transition: background 0.5s 0s ease-in;
+  -moz-transition: background 0.5s 0s ease-in;
+  -o-transition: background 0.5s 0s ease-in;
+  transition: background 0.5s 0s ease-in;
+}
+
+.logout {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  padding: 1rem 1.2rem;
+}
+
+.table {
+  width: 80vw;
 }
