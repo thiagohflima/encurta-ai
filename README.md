@@ -15,7 +15,7 @@
 - `cd frontend` and `npm install  && npm run play`  (or the equivalent for `yarn`) for dependencies of **front-end**
 
 - Default *username* and *password* are:
-> test / test
+  > test / test
 
 - Listening to **Postgres** at **localhost:5432**  
 - Listening to **Express** at **localhost:5000**  
