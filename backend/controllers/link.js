@@ -1,5 +1,10 @@
 const { link } = require('../models');
 
+const getAllLinks = async (req, res) => {
+  const linkQuery = await link.findAll();
+  res.status(200).json(linkQuery);
+};
+
 const getAllLinksByUser = async (req, res) => {
   const { userId } = req.body;
 
@@ -93,6 +98,7 @@ const updateLink = async (req, res) => {
 };
 
 module.exports = {
+  getAllLinks,
   getAllLinksByUser,
   getLinkById,
   createLink,

@@ -3,7 +3,6 @@ const { user } = require('../models');
 const verifyIfTestUserExists = async (req, res) => {
   const existAnyUser = await user.findOne();
 
-
   // mocking user for test purpose
   if (existAnyUser === null) {
     await user.create({

@@ -4,6 +4,6 @@ const router = express.Router();
 
 const userController = require('../controllers/user');
 
-router.get('/', userController.verifyIfTestUserExists);
+router.post('/', userController.verifyIfTestUserExists);
 
 module.exports = router;

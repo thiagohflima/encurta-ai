@@ -5,6 +5,7 @@ import { Table } from './components/Table';
 
 export default function App() {
   const [loggedIn, setLoggedIn] = useState(false);
+  const [userId, setUserId] = useState(0);
 
   return (
     <>
@@ -14,7 +15,7 @@ export default function App() {
         Encurt<span>Aí</span>
       </div>
 
-      {!loggedIn && <Login setLoggedIn={setLoggedIn} />}
+      {!loggedIn && <Login setLoggedIn={setLoggedIn} setUserId={setUserId} />}
       {loggedIn && <Table setLoggedIn={setLoggedIn} />}
 
       <div className='footer'>

@@ -271,6 +271,12 @@ body {
   margin-bottom: 0.5rem;
 }
 
+.login .input-container.error input {
+  border: 2px solid red;
+  background-color: #ffaac4;
+  color: red;
+}
+
 .login .button-container {
   margin-top: 0.5rem;
 }
