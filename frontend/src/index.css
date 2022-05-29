@@ -369,6 +369,11 @@ body {
   color: #6b2d29;
 }
 
+.btn-crud.ok {
+  background-color: #4e5052;
+  color: #e1e2e4;
+}
+
 .table .content {
   display: flex;
   justify-content: space-between;
@@ -439,5 +444,60 @@ h2 {
 
 .header span {
   opacity: 0.9;
-  color: #e45a84
+  color: #e45a84;
+}
+
+.link-short,
+.link-long {
+  max-width: 35%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.modal {
+  background-color: #f4f4f4;
+  color: #160408;
+  border-radius: 15px;
+  padding: 1rem;
+
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+  width: 50vw;
+}
+
+.modal .title {
+  font-family: 'Lobster', cursive;
+  margin-bottom: 0.75rem;
+  font-size: 1.3rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.modal .content {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal .content input {
+  width: 100%;
+  margin-bottom: 0.8rem;
+  height: 2rem;
+  padding: 0.2rem;
+  border: 1px solid rgb(199, 199, 199);
+  border-radius: 4px;
+  margin-top: 0.2rem;
+}
+
+.modal .content label {
+  font-family: 'Lobster', cursive;
+  opacity: 0.4;
+}
+
+.modal .action {
+  justify-content: end;
+  display: flex;
+}
+
+.modal .action button {
+  width: auto;
+  margin-top: 0.5rem;
 }

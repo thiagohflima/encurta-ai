@@ -1,5 +1,12 @@
 import { useState } from 'react';
+import Popup from 'reactjs-popup';
 import { EachItem } from '../EachItem';
+import { Modal } from '../Modal';
+
+const contentStyle = {
+  maxWidth: '600px',
+  width: '90%',
+};
 
 export const Table = ({ setLoggedIn }) => {
   const handleLogoutClick = () => {
@@ -8,7 +15,8 @@ export const Table = ({ setLoggedIn }) => {
 
   const [listOfLinks, setListOfLinks] = useState({});
 
-  const handleAddClick = () => {};
+  const [open, setOpen] = useState(false);
+  const closeModal = () => setOpen(false);
 
   return (
     <>
@@ -19,12 +27,15 @@ export const Table = ({ setLoggedIn }) => {
       <div className='box table'>
         <div className='title'>
           <h2>List of Links</h2>
-          <button className='btn-crud add' onClick={handleAddClick}>
+          <button className='btn-crud add' onClick={() => setOpen(o => !o)}>
             ADD
           </button>
+          <Popup open={open} onClose={closeModal} modal>
+            <Modal title='Add a New Link' type='add' closeModal={closeModal} />
+          </Popup>
         </div>
 
-        <EachItem />
+        <EachItem id='1' linkLong='DSOASDsiDJSADasdjoASD' linkShort='sadJIDS' />
       </div>
     </>
   );
