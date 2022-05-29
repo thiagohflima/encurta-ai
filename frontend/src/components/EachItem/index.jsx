@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Popup from 'reactjs-popup';
+import { apiUrl } from '../../util/api';
 import { Modal, ModalDelete } from '../Modal';
 
 export const EachItem = ({ id, linkLong, linkShort, updateTable }) => {
@@ -14,7 +15,7 @@ export const EachItem = ({ id, linkLong, linkShort, updateTable }) => {
       <a href={linkLong} className='link-long'>
         {linkLong}
       </a>
-      <a href={linkShort} className='link-short'>
+      <a href={apiUrl + '/r/' + linkShort} className='link-short'>
         {linkShort}
       </a>
       <div className='actions'>
