@@ -6,26 +6,12 @@ const getAllLinks = async (req, res) => {
 };
 
 const getAllLinksByUser = async (req, res) => {
-  const { userId } = req.body;
+  const { userId } = req.params;
 
   const linkQuery = await link.findAll({
     where: { userId: userId },
   });
   res.status(200).json(linkQuery);
-};
-
-const getLinkById = async (req, res) => {
-  const { id } = req.params;
-
-  const linkQuery = await link.findOne({
-    where: { id: id },
-  });
-
-  if (linkQuery !== null) {
-    res.status(200).json(linkQuery);
-  } else {
-    res.status(404).json('Id not found');
-  }
 };
 
 const createLink = async (req, res) => {
@@ -83,7 +69,7 @@ const updateLink = async (req, res) => {
       );
       res.status(200).json({
         message: 'Updated',
-        updatedVehicle: {
+        updatedLink: {
           id,
           linkLong,
           linkShort,
@@ -100,7 +86,6 @@ const updateLink = async (req, res) => {
 module.exports = {
   getAllLinks,
   getAllLinksByUser,
-  getLinkById,
   createLink,
   deleteLink,
   updateLink,

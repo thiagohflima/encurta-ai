@@ -324,6 +324,17 @@ body {
   flex-direction: column;
 }
 
+.table .head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.table .head h4 {
+  width: 35%;
+}
+
 .table .title {
   display: flex;
   justify-content: space-between;
@@ -385,6 +396,11 @@ body {
   justify-content: space-between;
   width: 100%;
   align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.table .content:last-child {
+  margin-bottom: 0;
 }
 
 .table .content .actions {
@@ -394,6 +410,25 @@ body {
 }
 
 .table .content .actions .btn-crud:first-child {
+  margin-right: 0.25rem;
+}
+
+.head h4 {
+  opacity: 0.4;
+  font-family: 'Lobster', cursive;
+}
+
+.head h4 span {
+  color: #000;
+  margin-left: 0.25rem;
+}
+
+.head .invisible-btn {
+  visibility: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.head .invisible-btn .btn-crud:first-child {
   margin-right: 0.25rem;
 }
 
@@ -455,9 +490,18 @@ h2 {
 
 .link-short,
 .link-long {
-  max-width: 35%;
+  width: 35%;
   text-overflow: ellipsis;
   overflow: hidden;
+  height: 1.1rem;
+
+  color: #f4f4f4;
+  text-decoration: none;
+}
+
+.link-short:hover,
+.link-long:hover {
+  color: #a1a1a1
 }
 
 .modal {
@@ -487,7 +531,7 @@ h2 {
   width: 100%;
   margin-bottom: 0.8rem;
   height: 2rem;
-  padding: 0.2rem;
+  padding: 0.75rem;
   border: 1px solid rgb(199, 199, 199);
   border-radius: 4px;
   margin-top: 0.2rem;

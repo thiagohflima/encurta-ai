@@ -1,15 +1,72 @@
-import { useState } from 'react';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
+import { apiUrl } from '../../util/api';
 
-export const Modal = ({ title, type, closeModal }) => {
+export const Modal = ({
+  title,
+  type,
+  closeModal,
+  userId,
+  linkLong,
+  linkShort,
+  updateTable,
+  id,
+}) => {
   const [twoLinks, setTwoLinks] = useState({ linkLong: '', linkShort: '' });
+
+  useEffect(() => {
+    setTwoLinks({
+      linkLong: linkLong,
+      linkShort: linkShort,
+    });
+  }, []);
 
   const handleSaveClickFromAdd = () => {
     console.log('add');
+
+    axios
+      .post(apiUrl + '/link/', {
+        userId: userId,
+        linkLong: twoLinks.linkLong,
+        linkShort: twoLinks.linkShort,
+      })
+      .then(function (res) {
+        // handle success
+        console.log(res);
+        updateTable();
+      })
+      .catch(function (error) {
+        // handle error
+        console.log(error);
+      })
+      .then(function () {
+        // always executed
+      });
+
     closeModal();
   };
 
   const handleSaveClickFromEdit = () => {
     console.log('edit');
+
+    axios
+      .put(apiUrl + '/link/' + id, {
+        linkLong: twoLinks.linkLong,
+        linkShort: twoLinks.linkShort,
+      })
+      .then(function (res) {
+        // handle success
+        console.log(res);
+        updateTable();
+      })
+      .catch(function (error) {
+        // handle error
+        console.log(error);
+      })
+      .then(function () {
+        // always executed
+      });
+
     closeModal();
   };
 
@@ -25,6 +82,7 @@ export const Modal = ({ title, type, closeModal }) => {
             onChange={e => {
               setTwoLinks({ ...twoLinks, linkLong: e.target.value });
             }}
+            value={twoLinks.linkLong}
           />
         </div>
         <div className='input-container'>
@@ -35,6 +93,7 @@ export const Modal = ({ title, type, closeModal }) => {
             onChange={e => {
               setTwoLinks({ ...twoLinks, linkShort: e.target.value });
             }}
+            value={twoLinks.linkShort}
           />
         </div>
       </div>
@@ -54,9 +113,25 @@ export const Modal = ({ title, type, closeModal }) => {
   );
 };
 
-export const ModalDelete = ({ title, closeModal }) => {
+export const ModalDelete = ({ title, closeModal, updateTable, id }) => {
   const handleSaveClickFromDelete = () => {
     console.log('del');
+
+    axios
+      .delete(apiUrl + '/link/' + id)
+      .then(function (res) {
+        // handle success
+        console.log(res);
+        updateTable();
+      })
+      .catch(function (error) {
+        // handle error
+        console.log(error);
+      })
+      .then(function () {
+        // always executed
+      });
+
     closeModal();
   };
 

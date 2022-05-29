@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Popup from 'reactjs-popup';
 import { Modal, ModalDelete } from '../Modal';
 
-export const EachItem = ({ id, linkLong, linkShort }) => {
+export const EachItem = ({ id, linkLong, linkShort, updateTable }) => {
   const [openEdit, setOpenEdit] = useState(false);
   const closeModalEdit = () => setOpenEdit(false);
 
@@ -11,8 +11,12 @@ export const EachItem = ({ id, linkLong, linkShort }) => {
 
   return (
     <div className='content'>
-      <div className='link-long'>{linkLong}</div>
-      <div className='link-short'> {linkShort}</div>
+      <a href={linkLong} className='link-long'>
+        {linkLong}
+      </a>
+      <a href={linkShort} className='link-short'>
+        {linkShort}
+      </a>
       <div className='actions'>
         <button className='btn-crud edit' onClick={() => setOpenEdit(o => !o)}>
           EDIT
@@ -25,6 +29,7 @@ export const EachItem = ({ id, linkLong, linkShort }) => {
             linkLong={linkLong}
             linkShort={linkShort}
             closeModal={closeModalEdit}
+            updateTable={updateTable}
           />
         </Popup>
         <button className='btn-crud del' onClick={() => setOpenDelete(o => !o)}>
@@ -36,6 +41,7 @@ export const EachItem = ({ id, linkLong, linkShort }) => {
             type='del'
             id={id}
             closeModal={closeModalDelete}
+            updateTable={updateTable}
           />
         </Popup>
       </div>

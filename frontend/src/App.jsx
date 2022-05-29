@@ -22,9 +22,6 @@ export default function App() {
       {!loggedIn && <Login setLoggedIn={setLoggedIn} setUserId={setUserId} />}
       {loggedIn && <Table setLoggedIn={setLoggedIn} userId={userId} />}
 
-      <div>UserId: {userId}</div>
-      <div>loggedIn: {loggedIn ? 'True' : 'False'}</div>
-
       <div className='footer'>
         <span>Developed by:</span> Thiago H F Lima
       </div>
