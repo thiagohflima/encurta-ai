@@ -1,6 +1,17 @@
+const axios = require('axios');
+
 export const Login = ({ setLoggedIn }) => {
   const handleLoginClick = () => {
-    setLoggedIn(true);
+    // setLoggedIn(true);
+
+    async function getUser() {
+      try {
+        const response = await axios.get('localhost:5000/user');
+        console.log(response);
+      } catch (error) {
+        console.error(error);
+      }
+    }
   };
 
   return (
